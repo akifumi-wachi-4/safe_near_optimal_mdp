@@ -63,10 +63,10 @@ python simple_make_rand_settings.py
 
 And, run the simulation for each method:
 ```bash
-python simple_oracle.py    # Safe/reward known
-python simple_proposed.py  # SNO-MDP
-python simple_safemdp.py   # SafeMDP (Turchetta et al., 2016)
-python simple_seo.py       # SafeExpOpt-MDP (Wachi et al., 2018)
+python main_oracle.py      # Safe/reward known
+python main_proposed.py    # SNO-MDP (Our proposed method, Wachi and Sui, 2020)
+python main_safemdp.py     # SafeMDP (Turchetta et al., 2016)
+python main_seo.py         # SafeExpOpt-MDP (Wachi et al., 2018)
 ```
 
 For our proposed method (i.e.,`simple_proposed.py`) , you can specify whether `ES2`/`P-ES2` is leveraged, using `simple_args.py`.
