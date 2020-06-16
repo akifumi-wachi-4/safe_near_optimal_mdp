@@ -3,6 +3,8 @@ from __future__ import division, print_function, absolute_import
 import GPy
 import numpy as np
 
+import arguments
+
 from safemdp.grid_world import (compute_S_hat0, shortest_path)
 
 from utils.reward_utilities import RewardObj
@@ -10,10 +12,9 @@ from utils.safety_utilities import SafetyObj
 from utils.mdp_utilities import (calc_opt_policy, reward_w_exp_bonus,
                                  check_safe_exp_exit_cond)
 
-from simple_args import simple_argparse
 
 
-args = simple_argparse()
+args = arguments.safemdp_argparse()
 
 # Define world
 world_shape = args.world_shape
@@ -226,5 +227,5 @@ for i in range(args.max_iter_reward_opt):
 if args.render_gym:
     env.close()
 
-file_name = "result/simple/safe_near_opt_mdp_es2_p"
+file_name = "result/safe_near_opt_mdp_" + args.es2_type
 np.savez(file_name, history_reward=history_reward)

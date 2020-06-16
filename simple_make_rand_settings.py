@@ -2,12 +2,12 @@ from __future__ import division, print_function, absolute_import
 
 import GPy
 import numpy as np
+import arguments
+
 from safemdp.grid_world import (draw_gp_sample, compute_S_hat0)
 
-from simple_args import simple_argparse
 
-
-args = simple_argparse()
+args = arguments.safemdp_argparse()
 
 # Define world
 world_shape = args.world_shape
@@ -44,5 +44,5 @@ S_hat0 = compute_S_hat0(np.nan, world_shape, 4, safety, step_size, h)
 start_pos = np.random.choice(np.where(S_hat0)[0])
 
 # Save the problem settings as a npz file
-np.savez('data/simple/random_settings', safety=safety, reward=reward,
+np.savez('data/simple/random_settings_new', safety=safety, reward=reward,
          start_pos=start_pos)

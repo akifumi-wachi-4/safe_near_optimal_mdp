@@ -3,16 +3,16 @@ from __future__ import division, print_function, absolute_import
 import GPy
 import numpy as np
 
+import arguments
+
 from safemdp.grid_world import (compute_true_safe_set, compute_S_hat0,
                                 compute_true_S_hat)
 
 from utils.safety_utilities import SafetyObj
 from utils.mdp_utilities import (calc_opt_policy, reward_oracle)
 
-from simple_args import simple_argparse
 
-
-args = simple_argparse()
+args = arguments.safemdp_argparse()
 
 # Define world
 world_shape = args.world_shape
@@ -131,5 +131,5 @@ for i in range(args.max_time_steps):
 if args.render_gym:
     env.close()
 
-file_name = "result/simple/oracle"
+file_name = "result/oracle"
 np.savez(file_name, history_reward=history_reward)

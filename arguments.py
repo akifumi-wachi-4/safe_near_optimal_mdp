@@ -2,7 +2,7 @@ from __future__ import division, print_function, absolute_import
 import argparse
 
 
-def simple_argparse():
+def safemdp_argparse():
 
     parser = argparse.ArgumentParser(description='Safe-NearOpt-MDP')
     parser.add_argument('--h', type=float, default=-0.25,

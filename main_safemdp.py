@@ -3,13 +3,13 @@ from __future__ import division, print_function, absolute_import
 import GPy
 import numpy as np
 
+import arguments
+
 from safemdp.grid_world import (compute_true_safe_set, compute_S_hat0,
                                 compute_true_S_hat, shortest_path, GridWorld)
 
-from simple_args import simple_argparse
 
-
-args = simple_argparse()
+args = arguments.safemdp_argparse()
 
 # Define world
 world_shape = args.world_shape
@@ -135,5 +135,5 @@ for i in range(150):
 if args.render_gym:
     env.close()
 
-file_name = "result/simple/safemdp"
+file_name = "result/safemdp"
 np.savez(file_name, history_reward=np.array(history_reward))

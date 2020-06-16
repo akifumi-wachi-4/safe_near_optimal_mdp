@@ -4,6 +4,8 @@ import GPy
 import numpy as np
 import mdptoolbox
 
+import arguments
+
 from safemdp.grid_world import compute_S_hat0
 
 from utils.reward_utilities import RewardObj
@@ -11,10 +13,8 @@ from utils.safety_utilities import SafetyObj
 from utils.mdp_utilities import (reward_w_exp_bonus, grid_world_graph_w_stay,
                                  calculate_P_grid, calculate_P_opti_pess)
 
-from simple_args import simple_argparse
 
-
-args = simple_argparse()
+args = arguments.safemdp_argparse()
 
 # Define world
 world_shape = args.world_shape
@@ -197,5 +197,5 @@ for i in range(args.max_iter_reward_opt):
 if args.render_gym:
     env.close()
 
-file_name = "result/simple/safe_exp_opt"
+file_name = "result/safe_exp_opt"
 np.savez(file_name, history_reward=history_reward)
