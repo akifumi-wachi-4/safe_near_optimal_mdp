@@ -63,7 +63,7 @@ python main_safemdp.py     # SafeMDP (Turchetta et al., 2016)
 python main_seo.py         # SafeExpOpt-MDP (Wachi et al., 2018)
 ```
 
-For our proposed method (i.e.,`simple_proposed.py`) , you can specify whether `ES2`/`P-ES2` is leveraged, using `simple_args.py`.
+For our proposed method, you can specify whether `ES2`/`P-ES2` is leveraged, using `arguments.py`.
 
 ```python
 parser.add_argument('--es2-type', type=str, default='es2', 
