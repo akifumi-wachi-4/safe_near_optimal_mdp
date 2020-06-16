@@ -1,13 +1,6 @@
 *.pyc
-*.npz
-*.npy
 
 __pycache__/
 .vscode/
 result/
 old/
-
-# Huge files
-mars.IMG
-mars.tif
-data/mars/mars_reward.npy
