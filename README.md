@@ -55,16 +55,10 @@ In this script, the agent will target for randomly specified positions.
 
 ## Synthetic Environment
 
-For running the synthetic experiment in our paper, you first create a random environment and a start position by the following command:
-
-```python
-python simple_make_rand_settings.py
-```
-
-And, run the simulation for each method:
+Run the simulation for each method:
 ```bash
 python main_oracle.py      # Safe/reward known
-python main_proposed.py    # SNO-MDP (Our proposed method, Wachi and Sui, 2020)
+python main_sno_mdp.py     # SNO-MDP (Our proposed method, Wachi and Sui, 2020)
 python main_safemdp.py     # SafeMDP (Turchetta et al., 2016)
 python main_seo.py         # SafeExpOpt-MDP (Wachi et al., 2018)
 ```
@@ -75,6 +69,12 @@ For our proposed method (i.e.,`simple_proposed.py`) , you can specify whether `E
 parser.add_argument('--es2-type', type=str, default='es2', 
                     choices=['es2', 'p_es2', 'none'],
                     help='whether or not ES2/P-ES2 is used')
+```
+
+If you would like to create a new environment and a start position, please use the following command:
+
+```python
+python simple_make_rand_settings.py
 ```
 
 ## Citation
