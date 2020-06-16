@@ -2,12 +2,13 @@
 
 import numpy as np
 import GPy
+
+import arguments
+
 from safemdp.grid_world import draw_gp_sample
 from gp_safety_gym import Engine_GP
-from simple_args import simple_argparse
 
-
-args = simple_argparse()
+args = arguments.safemdp_argparse()
 
 # Define world
 world_shape = args.world_shape
