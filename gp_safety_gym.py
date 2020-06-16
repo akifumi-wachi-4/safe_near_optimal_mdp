@@ -1,12 +1,12 @@
 import gym
 import safety_gym
 import numpy as np
+
 from safety_gym.envs.engine import Engine
 from mujoco_py import (MjViewer, const, MjRenderContextOffscreen)
 
 
 MAP_SIZE = 3.5
-
 
 def reward_color(reward_value):
     """ Change the color depending on the reward function value
