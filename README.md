@@ -77,25 +77,6 @@ parser.add_argument('--es2-type', type=str, default='es2',
                     help='whether or not ES2/P-ES2 is used')
 ```
 
-
-
-## Mars environment
-
-We used Mars Digital Elevation Model (DEM) created from <a href="https://hirise.lpl.arizona.edu/">HiRISE</a> camera. The dataset will be automatically downloaded by running our source code. For running the experiment using Mars data, you first go to `mars` directory by
-```bash
-cd mars
-```
-
-Then execute the following commands:
-```bash
-python mars_oracle.py     # Safe/reward known
-python mars_proposed.py   # SNO-MDP
-python mars_safemdp.py    # SafeMDP (Turchetta et al., 2016)
-python mars_seo.py        # SafeExpOpt-MDP (Wachi et al., 2018)
-```
-
-
-
 ## Citation
 
 If you find this code useful in your research, please consider citing:
