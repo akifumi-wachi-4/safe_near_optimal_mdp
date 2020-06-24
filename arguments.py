@@ -39,7 +39,7 @@ def safemdp_argparse():
                         help='thresh. for stopping exploration w.r.t. CI')
     parser.add_argument('--multi-obs', default=True,
                         help='define if the agent can observe multiple points')
-    parser.add_argument('--render-gym', default=False,
+    parser.add_argument('--render-gym', default=True,
                         help='rendering using GP-Safety-Gym')
     parser.add_argument('--es2-type', type=str, default='es2',
                         choices=['es2', 'p_es2', 'none'],
