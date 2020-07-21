@@ -17,7 +17,7 @@ pip install pymdptoolbox
 
 ### SafeMDP
 
-Our code also depends upon <a href="https://github.com/befelix/SafeMDP" target="_blank">SafeMDP</a>. For the installation, see the original repository.
+Our code also heavily depends upon <a href="https://github.com/befelix/SafeMDP" target="_blank">SafeMDP</a>. For the installation, see the original repository.
 
 
 ### Safety-Gym
